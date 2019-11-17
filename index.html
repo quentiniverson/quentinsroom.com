@@ -24,10 +24,30 @@ body {
        }
 }
 </style>
+var iterations = 1;
 
-<video controls autoplay preload loop src="quentinsroom.mp4" id = "quentinsroom">
+document.getElementById('iteration').innerText = iterations;
+
+quentinsroom.addEventListener('ended', function () {
+
+	if (iterations < 3) {  
+
+	this.currentTime = 0;
+        this.play();
+        iterations ++;
+	
+	document.getElementById('iteration').innerText = iterations;
+
+  }   
+
+}, false);
+
+<video id="quentinsroom" controls>
+    <source src="/Users/marcusaguilar/Downloads/quentinsroom.mp4" type="video/mp4" />
 </video>
-<style> 
+
+ 
+</html>
 
  
 </html>
