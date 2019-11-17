@@ -1,5 +1,3 @@
 # quentinsroom.com
-<video autoplay loop src = "quentinsroom.mp4"
-
-</video>
+<video src="quentinsroom.mp4" width="320" height="200" controls preload></video>
 
