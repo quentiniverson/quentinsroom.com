@@ -1,2 +1,6 @@
 # quentinsroom.com
-<video autoplay loop src="quentinsroom.mp4" ></video>
+<video autoplay loop >
+
+<source src = "quentinsroom.mp4" type = "video/mp4">
+
+</video>
