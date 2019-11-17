@@ -1,4 +1,2 @@
 # quentinsroom.com
-<video autoplay loop id = "quentinsroom">
-  <source src="quentinsroom.mp4 >
-</video>
+<video src="quentinsroom.mp4" width="320" height="200" controls preload></video>
