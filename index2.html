@@ -3,67 +3,76 @@
 <head>
 <title>quentinsroom</title>
  <style>
-body {
-  background-color: black;
+<style>
+* {
+  box-sizing: border-box;
 }
- video {
- display: block;
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#pink {
  margin-top: auto;
  margin-bottom: auto;
  margin-right: auto;
  margin-left: auto;
- max-width:90%;
+ Max-width:100%;
  height:auto;
- object-fit: cover;
 }
 
-body, html {
-  height: 100%;
-  margin: 0;
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
 }
-
-.bg {
-  background-image: url("pink.gif");
-
-  height: 100%; 
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media only screen and (max-width:300px) {
-      body {
-        background:black;
-       }
-}
-.button {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #purple;
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
   border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-  Margin: auto;
-	
+  background: #000;
+  color: #fff;
+  cursor: pointer;
 }
 
-.button:hover {background-color: pink}
-
-.button:active {
-  background-color: purple;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+#myBtn:hover {
+  background: #ddd;
+  color: black;
 }
+
 </style>
 </head>
 
-<div class="bg"></div>
+<body>
+<video control autoplay muted loop id="pink">
+  <source src="pink.mp4" type="video/mp4">
+</video>
+
+<div class="content">
+<button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+<script>
+var video = document.getElementById("pink");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
 
 
 </html>
