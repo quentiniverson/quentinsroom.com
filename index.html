@@ -2,8 +2,6 @@
 <html>
 <head>
 <title>quentins room</title>
-</head>
-
  <style>
 body {
   background-color: black;
@@ -11,7 +9,7 @@ body {
  video {
  display: block;
  margin-top: auto;
- maring-bottom: auto;
+ margin-bottom: auto;
  margin-right: auto;
  margin-left: auto;
  max-width:90%;
@@ -23,31 +21,42 @@ body {
         background:black;
        }
 }
-</style>
-var iterations = 1;
-
-document.getElementById('iteration').innerText = iterations;
-
-quentinsroom.addEventListener('ended', function () {
-
-	if (iterations < 3) {  
-
-	this.currentTime = 0;
-        this.play();
-        iterations ++;
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #purple;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  Margin: auto;
 	
-	document.getElementById('iteration').innerText = iterations;
+}
 
-  }   
+.button:hover {background-color: pink}
 
-}, false);
+.button:active {
+  background-color: purple;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+</head>
+
+
+
 
 <video id="quentinsroom" controls autoplay loop>
-    <source src="quentinsroom.mp4" type="video/mp4" />
+    <source src="/Users/marcusaguilar/Downloads/quentinsroom.mp4" type="video/mp4" />
 </video>
+<button class = "button" >enter</button>
 
- 
-</html>
 
- 
+
+
+
 </html>
